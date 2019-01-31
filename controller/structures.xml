@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../doc/structures.dtd">
+<structures>
+	<structure id="taoPeter_main" name="Peter\'s extension" level="15" group="main">
+		<description />
+		<sections>
+			<section id="taoPeter_main" name="Peter\'s extension" url="/taoPeter/TaoPeter/index" />
+			<section id="taoPeter_other" name="Template" url="/taoPeter/TaoPeter/templateExample" />
+		</sections>
+	</structure>
+</structures>
