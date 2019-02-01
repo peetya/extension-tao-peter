@@ -27,7 +27,7 @@ return array(
     'label' => 'Peter\'s extension',
     'description' => 'This is Peter\'s extension',
     'license' => 'GPL-2.0',
-    'version' => '0.1.0',
+    'version' => '0.2.0',
     'author' => 'Peter Halasz',
     'requires' => array(
         'tao' => '>=24.3.0'
@@ -36,6 +36,7 @@ return array(
     'acl' => array(
         array('grant', 'http://www.tao.lu/Ontologies/generis.rdf#taoPeterManager', array('ext'=>'taoPeter')),
     ),
+    'update' => \peetya\taoPeter\scripts\update\Updater::class,
     'install' => array(
         'php' => array(
             \peetya\taoPeter\scripts\install\RegisterItemUpdateEvent::class,
