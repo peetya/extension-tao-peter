@@ -14,9 +14,10 @@ class SaveCounterService extends ConfigurableService
      * Then the service should be registered in the following file:
      * <extension>/config/default/<service name>.conf.php
      *
-     * ... on the following way:
-     * <?php
-     * return new \peetya\taoPeter\model\SaveCounterService();
+     * ... with the following content:
+     *      <?php
+     *
+     *      return new \peetya\taoPeter\model\SaveCounterService();
      */
     const SERVICE_ID = 'taoPeter/saveCounter';
 
