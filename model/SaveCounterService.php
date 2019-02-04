@@ -2,27 +2,28 @@
 
 namespace peetya\taoPeter\model;
 
+use oat\generis\model\OntologyAwareTrait;
 use oat\oatbox\service\ConfigurableService;
 use oat\taoItems\model\event\ItemUpdatedEvent;
 
 class SaveCounterService extends ConfigurableService
 {
-    /**
-     * SERVICE_ID should be in the following format:
-     * <extension name>/<service name>
-     *
-     * Then the service should be registered in the following file:
-     * <extension>/config/default/<service name>.conf.php
-     *
-     * ... with the following content:
-     *      <?php
-     *
-     *      return new \peetya\taoPeter\model\SaveCounterService();
-     */
+    use OntologyAwareTrait;
+
     const SERVICE_ID = 'taoPeter/saveCounter';
+    const PROPERTY_COUNT = 'http://www.tao.lu/Ontologies/TAOItem.rdf#ItemCount';
 
     public function onItemUpdate(ItemUpdatedEvent $event)
     {
-        $this->logDebug('Item has been updated');
+        $item     = $this->getResource($event->getItemUri());
+        $property = $this->getProperty(self::PROPERTY_COUNT);
+        $value    = (string) $item->getOnePropertyValue($property);
+
+        $this->logDebug('Item has been updated with the following value: ' . $value);
+
+        $value = (integer) $value;
+        $value++;
+
+        $item->editPropertyValues($property, $value);
     }
 }

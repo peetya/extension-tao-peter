@@ -7,12 +7,12 @@
          xmlns:ns2="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#"
          xmlns:ns3="http://www.tao.lu/Ontologies/generis.rdf#">
 
-  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemDescription">
-    <ns2:widget>http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextArea</ns2:widget>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemCount">
+    <ns2:widget>http://www.tao.lu/datatypes/WidgetDefinitions.rdf#Readonly</ns2:widget>
     <ns3:is_language_dependent>http://www.tao.lu/Ontologies/generis.rdf#False</ns3:is_language_dependent>
     <ns3:Multiple>http://www.tao.lu/Ontologies/generis.rdf#False</ns3:Multiple>
     <rdf:type>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</rdf:type>
-    <rdfs:label xml:lang="en-US">Description</rdfs:label>
+    <rdfs:label xml:lang="en-US">Count</rdfs:label>
     <rdfs:range>http://www.w3.org/2000/01/rdf-schema#Literal</rdfs:range>
     <rdfs:domain>http://www.tao.lu/Ontologies/TAOItem.rdf#Item</rdfs:domain>
   </rdf:Description>
