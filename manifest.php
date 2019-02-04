@@ -27,7 +27,7 @@ return array(
     'label' => 'Peter\'s extension',
     'description' => 'This is Peter\'s extension',
     'license' => 'GPL-2.0',
-    'version' => '0.2.0',
+    'version' => '0.3.0',
     'author' => 'Peter Halasz',
     'requires' => array(
         'tao' => '>=24.3.0'
@@ -42,7 +42,7 @@ return array(
             \peetya\taoPeter\scripts\install\RegisterItemUpdateEvent::class,
         ),
         'rdf' => array(
-            __DIR__ . '/scripts/install/item_description.rdf',
+            __DIR__ . '/scripts/install/item_count.rdf',
         ),
     ),
     'uninstall' => array(
