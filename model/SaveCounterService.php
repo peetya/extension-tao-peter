@@ -11,7 +11,7 @@ class SaveCounterService extends ConfigurableService
     use OntologyAwareTrait;
 
     const SERVICE_ID = 'taoPeter/saveCounter';
-    const PROPERTY_COUNT = 'http://www.tao.lu/Ontologies/TAOItem.rdf#ItemDescription';
+    const PROPERTY_COUNT = 'http://www.tao.lu/Ontologies/TAOItem.rdf#ItemCount';
 
     public function onItemUpdate(ItemUpdatedEvent $event)
     {
